@@ -35,4 +35,9 @@ mkdir -p ~/.config
 # This points ~/.config/nvim to the nvim folder inside your dotfiles repo
 ln -sf $(pwd)/nvim ~/.config/nvim
 
+# Ensure ~/.local/bin is permanently in the PATH for interactive shells
+if ! grep -q 'export PATH="$HOME/.local/bin:$PATH"' ~/.bashrc; then
+  echo 'export PATH="$HOME/.local/bin:$PATH"' >>~/.bashrc
+fi
+
 echo "Installation complete! Enjoy Neovim."
