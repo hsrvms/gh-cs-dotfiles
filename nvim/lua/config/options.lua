@@ -4,6 +4,11 @@
 
 vim.opt.winbar = "%=%m %f"
 vim.opt.clipboard = "unnamedplus"
+vim.filetype.add({
+  extension = {
+    templ = "templ",
+  },
+})
 
 -- Fallback to OSC 52 clipboard when connected via SSH
 if vim.env.SSH_TTY then
