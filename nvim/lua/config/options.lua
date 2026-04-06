@@ -3,6 +3,7 @@
 -- Add any additional options here
 
 vim.opt.winbar = "%=%m %f"
+vim.opt.clipboard = "unnamedplus"
 
 -- Fallback to OSC 52 clipboard when connected via SSH
 if vim.env.SSH_TTY then
